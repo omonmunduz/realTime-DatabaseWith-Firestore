@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+             <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Cloud cafe</h1>
+            <div class="content">
+
+                <form id="add-cafe-form">
+                    <input type="text" name='name' placeholder="Cafe name">
+                    <input type="text" name='city' placeholder="Cafe location">
+                    <button>Add cafe</button>
+                </form>
+
+                <ul id="cafe-list"></ul>
+            </div>
+            
+            <script>
+              // Your web app's Firebase configuration
+              var firebaseConfig = {
+                apiKey: "AIzaSyCAlhxhaS_qtbM-MUaI5TqgAgtcx6Hv04k",
+                authDomain: "cloud-cafe-3d412.firebaseapp.com",
+                databaseURL: "https://cloud-cafe-3d412.firebaseio.com",
+                projectId: "cloud-cafe-3d412",
+                storageBucket: "cloud-cafe-3d412.appspot.com",
+                messagingSenderId: "377824153553",
+                appId: "1:377824153553:web:827aac2745af35c9135af0",
+                measurementId: "G-TM43FV3VY3"
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+              firebase.analytics();
+              // create a variable for your database  remember we included both firebase and firestore in our srcipt tags at top of this folder
+              const db = firebase.firestore();
+            </script>
+            <script src="app.js"></script>
+        </body>
+</html>
